@@ -11,20 +11,7 @@ export function ProfilePage() {
 	const todoList = useSelector((state: RootState) => state.todoList);
 
 	const onButtonClick = () => setBoxColor(boxColor === 'red' ? 'blue' : 'red');
-	console.log(todoList);
-	return (
-		<div className={classes.root}>
-			<Typography variant="h4" gutterBottom>
-				You have {todoList.length} TODOs in your list!
-			</Typography>
-			<div className={classes.centerContainer}>
-				<HomeBox size={300} color={boxColor} />
-				<Button className={classes.button} onClick={onButtonClick} variant="outlined" color="primary">
-					BEST START
-				</Button>
-			</div>
-		</div>
-	);
+	return <div className={classes.root}>Profile Screen</div>;
 }
 
 const useStyles = makeStyles({
