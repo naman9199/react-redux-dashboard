@@ -1,7 +1,8 @@
 // prettier-ignore
 import { Badge, Divider, Drawer as DrawerMui, Hidden, List, ListItem, ListItemIcon, ListItemText, makeStyles, Theme } from '@material-ui/core';
 import FormatListNumberedIcon from '@material-ui/icons/FormatListNumbered';
-import HomeIcon from '@material-ui/icons/Home';
+// import HomeIcon from '@material-ui/icons/Home';
+import { Home, Person } from '@material-ui/icons';
 import * as React from 'react';
 import { Todo } from '../model/todo';
 import { useSelector } from 'react-redux';
@@ -72,7 +73,7 @@ function Content() {
 			<List>
 				<ListItem button onClick={() => history.push(router.home().$)} selected={home}>
 					<ListItemIcon>
-						<HomeIcon />
+						<Home />
 					</ListItemIcon>
 					<ListItemText primary="Home" />
 				</ListItem>
@@ -90,7 +91,7 @@ function Content() {
 			<List>
 				<ListItem button onClick={() => history.push(router.profile().$)} selected={profile}>
 					<ListItemIcon>
-						<TodoIcon todoList={todoList} />
+						<Person />
 					</ListItemIcon>
 					<ListItemText primary="Profile" />
 				</ListItem>
